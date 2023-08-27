@@ -31,9 +31,23 @@ Slackware:
 ```
 cat /etc/slackware-version
 ```
-
-
-
+Gentoo Based:
+```
+emerge --info | grep "repository:"
+```
+Mandvira/Mageia:
+```
+cat /etc/mandriva-release
+```
+# Kernel and Architecture(x64|x86)
+For All Distirbutions:
+```
+uname -srm
+uname -a
+ls /boot | grep vmlinuz
+cat /proc/version
+dmesg | grep Linux
+```
 
 
 
