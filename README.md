@@ -6,6 +6,7 @@ enjoy! @__@
 Debian Based(like Ubuntu):
 ```
 lsb_release -a
+uname -a
 cat /etc/os-release
 cat /etc/issue
 cat /etc/apt/sources.list
@@ -14,5 +15,8 @@ cat /etc/debian_version
 RedHat Based(like CentOs or Fedora):
 ```
 cat /etc/redhat-release
+cat /etc/*-release
+* ~ put your Disturbution name.
+uname -a
 ```
 
