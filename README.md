@@ -3,8 +3,10 @@ This is good for those who don't know where to start when it comes to increasing
 # Operating System
 1.Distribution Type and Version? 
 ```
+# Debian Based
 lsb_release -a
 cat /etc/os-release
 cat /etc/apt/sources.list
 cat /etc/debian_version
+# Debian Based
 ```
