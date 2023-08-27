@@ -59,8 +59,20 @@ cat ~/.bash_profile
 cat ~/.bashrc
 cat ~/.bash_logout
 ```
-# 
-
+# Application and Services
+### Running Services Per User:
+Contains values such as "Time", "PID" and etc:
+```
+ps aux
+ps -ef
+top
+cat /etc/services
+```
+Here, we can limit the result and look for those services that are running by "root" and check for vulnerablities:
+```
+ps aux | grep root
+ps -ef | grep root
+```
 
 
 
