@@ -73,6 +73,15 @@ Here, we can limit the result and look for those services that are running by "r
 ps aux | grep root
 ps -ef | grep root
 ```
+### List of all apps(running & version):
+```
+ls -alh /usr/bin/
+ls -alh /sbin/
+dpkg -l
+rpm -qa
+ls -alh /var/cache/apt/archives
+ls -alh /var/cache/yum/
+```
 
 
 
