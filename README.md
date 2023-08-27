@@ -6,7 +6,6 @@ enjoy! @__@
 Debian Based(like Ubuntu):
 ```
 lsb_release -a
-uname -a
 cat /etc/os-release
 cat /etc/issue
 cat /etc/apt/sources.list
@@ -17,6 +16,31 @@ RedHat Based(like CentOs or Fedora):
 cat /etc/redhat-release
 cat /etc/*-release
 * ~ put your Disturbution name.
-uname -a
 ```
+Arch Based(like Artix or Garuda):
+```
+cat /etc/os-release
+cat /etc/lsb-release
+```
+SUSE Based(like Tumleweed or Leap):
+```
+cat /etc/SuSE-release
+cat /etc/os-release
+```
+Slackware:
+```
+cat /etc/slackware-version
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
