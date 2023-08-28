@@ -52,6 +52,16 @@ dmesg | grep Linux
 ```
 env
 set
+free
+ss
+df
+du
+lsblk
+lsusb
+lsmod
+lspci
+who
+uptime
 cat /etc/profile
 cat /etc/bashrc
 cat /etc/zshrc
@@ -66,6 +76,7 @@ Contains values such as "Time", "PID" and etc:
 ps aux
 ps -ef
 top
+pstree
 cat /etc/services
 ```
 Here, we can limit the result and look for those services that are running by "root" and check for vulnerablities:
@@ -103,7 +114,7 @@ replace your word with *:
 ```
 grep -i *
 ```
-
+# Network Environment & Communications
 
 
 
