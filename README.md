@@ -80,7 +80,28 @@ ls -alh /sbin/
 dpkg -l
 rpm -qa
 ls -alh /var/cache/apt/archives
+ls -aRl /etc/ 
 ls -alh /var/cache/yum/
+```
+### Any Schedule?
+```
+crontab -l
+ls -alh /var/spool/cron
+ls -al /etc/ | grep cron
+ls -al /etc/cron*
+cat /etc/cron*
+cat /etc/at.allow
+cat /etc/at.deny
+cat /etc/cron.allow
+cat /etc/cron.deny
+cat /etc/crontab
+cat /etc/anacrontab
+cat /var/spool/cron/crontabs/root
+```
+### For Founded Text Files(Sensitive Info):
+replace your word with *:
+```
+grep -i *
 ```
 
 
