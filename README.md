@@ -115,6 +115,15 @@ replace your word with *:
 grep -i *
 ```
 # Network Environment & Communications
+### Network Configuraation(DHCP, DNS, Forwarding, etc.):
+```
+cat /etc/resolv.conf
+cat /etc/sysconfig/network
+cat /etc/networks
+iptables -L
+hostname
+```
+
 
 
 
