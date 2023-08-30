@@ -108,6 +108,16 @@ cat /etc/cron.deny
 cat /etc/crontab
 cat /etc/anacrontab
 cat /var/spool/cron/crontabs/root
+/etc/init.d
+/etc/cron*
+/etc/cron.d 
+/etc/cron.deny
+/etc/cron.daily
+/etc/cron.hourly
+/etc/cron.monthly
+/etc/cron.weekly
+/etc/sudoers
+/etc/exports
 ```
 ### For Founded Text Files(Sensitive Info):
 replace your word with *:
@@ -197,6 +207,7 @@ strings /dev/mem -n10 | grep -i PASS    # In Memory Passwords
 find / -name authorized_keys 2> /dev/null    # SSH Keys
 find / -name id_rsa 2> /dev/null    # SSH Keys
 ```
+
 
 
 
