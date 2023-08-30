@@ -177,14 +177,26 @@ cat /etc/passwd | cut -d ":" -f 1    # List of users
 grep -v -E "^#" /etc/passwd | awk -F: '$3 == 0 { print $1}'   # List of super users
 awk -F: '($3 == "0") {print}' /etc/passwd   # List of super users
 cat /etc/sudoers    # Permissions and User Access
-cat /etc/group
-cat /etc/shadow
+cat /etc/group    # Information About Groups
+cat /etc/shadow    # User and Passwords(SHA256 or SHA512)
 ```
 ### Important And Sensitive Information:
-
-
-
-
+Files That May Contain Passwords:
+```
+grep --color=auto -rnw '/' -ie "PASSWORD" --color=always 2> /dev/null
+find . -type f -exec grep -i -I "PASSWORD" {} /dev/null \;
+cat ~/.bash_history
+cat ~/.nano_history
+cat ~/.zsh_history
+cat ~/.mysql_history
+cat ~/.php_history
+cat ~/.bashrc    # User Info
+cat ~/.profile    # User Info
+cat /etc/security/opasswd # Old Passwords
+strings /dev/mem -n10 | grep -i PASS    # In Memory Passwords
+find / -name authorized_keys 2> /dev/null    # SSH Keys
+find / -name id_rsa 2> /dev/null    # SSH Keys
+```
 
 
 
