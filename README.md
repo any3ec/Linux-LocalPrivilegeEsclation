@@ -119,6 +119,13 @@ cat /var/spool/cron/crontabs/root
 /etc/sudoers
 /etc/exports
 ```
+### Development Tools & Languages
+```
+find / -name perl*
+find / -name python*
+find / -name gcc*
+find / -name cc
+```
 ### For Founded Text Files(Sensitive Info):
 replace your word with *:
 ```
@@ -285,9 +292,27 @@ ls -alh /var/lib/dhcp3/
 ls -alh /var/log/postgresql/
 ls -alh /var/log/proftpd/
 ls -alh /var/log/samba/
+find / -name *.log 2> /dev/null
+And etc like: auth.log, messeges, dpkg.log, daemon.log, debug.log, dmesg, kern.log, mail.log
 ```
-
-
+# Writable PATHs:
+In the user we have access, do we have the ability to write, if yes, in what PATH?
+```
+find / -writable -type d 2>/dev/null      # Writeable Folders for our user
+find / -perm -222 -type d 2>/dev/null     # Writable Folders for our Anyone
+find / -perm -o w -type d 2>/dev/null     # Writable Folders that have at least one permission to write or any user in OS
+find / -perm -o x -type d 2>/dev/null     # Writable Folders that have at least one permission to execute or any user in OS
+find / \( -perm -o w -perm -o x \) -type d 2>/dev/null   # Writable Folders that have at least one permission to write, execute or any user in OS
+```
+# Check Your Weapons for Upload:
+```
+find / -name wget
+find / -name nc*
+find / -name netcat*
+find / -name tftp*
+find / -name ftp
+<< You can use "which" command >> ------> example: which wget 
+```
 
 
 
