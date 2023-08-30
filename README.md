@@ -206,7 +206,14 @@ cat /etc/security/opasswd # Old Passwords
 strings /dev/mem -n10 | grep -i PASS    # In Memory Passwords
 find / -name authorized_keys 2> /dev/null    # SSH Keys
 find / -name id_rsa 2> /dev/null    # SSH Keys
+find / -name id_dsa 2> /dev/null    # SSH Keys
+find / -name identity 2> /dev/null    # SSH Keys
+find / -name identity.pub 2> /dev/null    # SSH Keys
+find / -name ssh_host_dsa_key 2> /dev/null    # SSH Keys
+find / -name ssh_host_rsa_key 2> /dev/null    # SSH Keys
+find / -name ssh_host_key 2> /dev/null    # SSH Keys
 ```
+
 
 
 
