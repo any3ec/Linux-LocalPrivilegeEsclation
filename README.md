@@ -295,7 +295,8 @@ ls -alh /var/log/samba/
 find / -name *.log 2> /dev/null
 And etc like: auth.log, messeges, dpkg.log, daemon.log, debug.log, dmesg, kern.log, mail.log
 ```
-# Writable PATHs:
+# Preparation & LPE Exploits
+### Writable PATHs:
 In the user we have access, do we have the ability to write, if yes, in what PATH?
 ```
 find / -writable -type d 2>/dev/null      # Writeable Folders for our user
@@ -304,7 +305,7 @@ find / -perm -o w -type d 2>/dev/null     # Writable Folders that have at least 
 find / -perm -o x -type d 2>/dev/null     # Writable Folders that have at least one permission to execute or any user in OS
 find / \( -perm -o w -perm -o x \) -type d 2>/dev/null   # Writable Folders that have at least one permission to write, execute or any user in OS
 ```
-# Check Your Weapons for Upload:
+### Check Your Weapons for Upload:
 ```
 find / -name wget
 find / -name nc*
@@ -313,7 +314,11 @@ find / -name tftp*
 find / -name ftp
 << You can use "which" command >> ------> example: which wget 
 ```
+### Kernel Exploits:
 
+```
+
+```
 
 
 
