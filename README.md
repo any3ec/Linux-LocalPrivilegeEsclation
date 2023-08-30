@@ -167,5 +167,34 @@ python rce.py 'ip/anything/file.php?cmd=hostname'
 ```
 There are many ways to do this, but it depends on the conditions of the server you have.
 
+### Who Am I? What Can I Do? All About The Access Level:
+
+```
+id    # GID, UID, Groups, Username 
+who    # Time, Logged on Users
+last    # User login and logout information
+cat /etc/passwd | cut -d ":" -f 1    # List of users
+grep -v -E "^#" /etc/passwd | awk -F: '$3 == 0 { print $1}'   # List of super users
+awk -F: '($3 == "0") {print}' /etc/passwd   # List of super users
+cat /etc/sudoers    # Permissions and User Access
+cat /etc/group
+cat /etc/shadow
+```
+### Important And Sensitive Information:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
